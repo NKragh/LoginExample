@@ -6,9 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Transparent">
+
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
 
     <Grid>
 
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBox x:Name="UsernameInput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
+            <TextBox x:Name="PasswordInput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
+            <Button Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center" Content="LOGIN" Click="{Binding ButtonCommand}" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Page>

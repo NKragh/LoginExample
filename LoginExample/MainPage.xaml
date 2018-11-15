@@ -15,9 +15,12 @@
     <Grid>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-            <TextBox x:Name="UsernameInput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
-            <TextBox x:Name="PasswordInput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
-            <Button Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center" Content="LOGIN" Click="{Binding ButtonCommand}" Margin="10"/>
+            <TextBox x:Name="UsernameInput" Height="60" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" PlaceholderText="Enter username" Header="Username"
+                     Text="{Binding Username}"/>
+            <TextBox x:Name="PasswordInput" Height="60" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" PlaceholderText="Enter password" Header="Password"
+                     Text="{Binding Password}"/>
+
+            <Button Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" Content="LOGIN" Command="{Binding ButtonCommand}"/>
         </StackPanel>
     </Grid>
 </Page>
